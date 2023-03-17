@@ -33,7 +33,8 @@ class Main():
         pygame.font.init()
         
         self.win = pygame.display.set_mode((self.width, self.height))
-        pygame.display.set_caption(TITLE)
+        title = "{0}-side Fractal".format(self.sides)
+        pygame.display.set_caption(title)
         
         self.gameWinRect = pygame.Rect(self.xoff, self.yoff, self.gameWinWidth, self.gameWinHeight)
         self.gameWin = self.win.subsurface(self.gameWinRect)
@@ -42,7 +43,7 @@ class Main():
         self.gameWin.fill(BLACK)
         
         self.titleFont = pygame.font.SysFont(TITLE_FONT, FONT_SIZE)
-        title = self.titleFont.render(TITLE, 1, GOLD)
+        title = self.titleFont.render(title, 1, GOLD)
         w, h = title.get_size()
         blitX = (self.width - w) // 2
         blitY = (self.yoff - h) // 2
@@ -148,7 +149,7 @@ class Main():
 
 
 if __name__ == "__main__":
-    X = Main(sides=6)
+    X = Main(sides=5)
     X.run()
 
 
