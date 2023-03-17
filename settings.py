@@ -7,4 +7,3 @@ Y_OFF = int((HEIGHT - GAMEWIN_HEIGHT) * 0.8)
 FPS = 60
 TITLE_FONT = "comicsansms"
 FONT_SIZE = 40
-TITLE = "Pentagon Fractal"
